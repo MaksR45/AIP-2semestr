@@ -3,21 +3,21 @@
 
 using namespace std;
 
-void function(){
-    for(int i=-10;i<10;i++){
-        if(i>5){
-            cout << "X = " << i << " Y = " << 3*i-5 << endl;
+float function(float X){
+        if(X>5){
+            return 3*X-5;
         }
-        if(i==5){
-            cout << "X = " << i << " Y = " << 10 << endl;
+        if(X==5){
+            return 10;
         }
-        if(i<5){
-            cout << "X = " << i << " Y = " << 2*abs(i-2)+5 << endl;
+        if(X<5){
+            return 2*abs(X-2)+5;
         }
-    }
 }
 int main()
 {
-    function();
+    float X;
+    cin >> X;
+    cout << "X = " << X << " Y = " << function(X) << endl;
     return 0;
 }
