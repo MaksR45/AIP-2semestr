@@ -30,14 +30,14 @@ void ZerosRowsWhereMin(int mat[11][11]){//мне не нужно было дел
     }
 }
 
-void SumMinusElementsonMainDiag(int mat[11][11]){
+int SumMinusElementsonMainDiag(int mat[11][11]){
     int sumMinus=0;
     for(int i=0;i<11;i++){
         if(mat[i][i]<0){
             sumMinus += mat[i][i];
         }
     }
-    cout << "Sum = " << sumMinus << endl;
+    return sumMinus;
 }
 void ShowMatrix(int mat[11][11]){
     for(int i=0;i<11;i++){
@@ -54,7 +54,8 @@ int main()
     srand(39);
     ZapolniMatrix(numbers);
     ShowMatrix(numbers);
-    SumMinusElementsonMainDiag(numbers);
+    cout << "Sum = " << SumMinusElementsonMainDiag(numbers) << endl;
+
     ShowMatrix(numbers);
     return 0;
 }
